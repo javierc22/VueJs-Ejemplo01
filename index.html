@@ -4,11 +4,25 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>VueJS - Proyecto01</title>
+    <title>VueJS - Ejemplo01</title>
 </head>
 <body>
     <div id="app">
-        <h1>Hola</h1>
+        <h1>{{ title }}</h1>
+
+        <h3>Frutas Array</h3>
+        <ul>
+            <li v-for="fruit in fruits">{{ fruit }}</li>
+        </ul>
+
+        <h3>Frutas Array Object</h3>
+        <ul>
+            <li v-for="fruit in fruits2">
+                {{ fruit.quantity }} - {{ fruit.name }}
+                <span v-if="fruit.quantity === 0"> - Sin Stock</span>
+            </li>
+        </ul>
+
     </div>
     <!-- development version, includes helpful console warnings -->
     <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
