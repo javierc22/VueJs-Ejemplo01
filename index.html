@@ -16,6 +16,9 @@
         </ul>
 
         <h3>Frutas Array Object</h3>
+        <input type="text" v-model="newFruit">
+        <button @click="addFruit">Agregar</button>
+
         <ul>
             <li v-for="fruit in fruits2">
                 {{ fruit.quantity }} - {{ fruit.name }}
