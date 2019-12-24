@@ -9,15 +9,27 @@ const app = new Vue({
             {name: 'Mango', quantity: 30},
             {name: 'Uvas', quantity: 0}
         ],
-        newFruit: ''
+        newFruit: '',
+        total: 0
     },
     methods: {
         addFruit() {
             this.fruits2.push({
                 name: this.newFruit, quantity: 0
             });
-            
+
             this.newFruit = '';
         }
+    },
+    computed: {
+        addUpFruits() {
+            this.total = 0;
+            for (fruit of this.fruits2) {
+                this.total = this.total + fruit.quantity;
+            }
+
+            return this.total;
+        }
+
     }
 })

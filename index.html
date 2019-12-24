@@ -16,15 +16,19 @@
         </ul>
 
         <h3>Frutas Array Object</h3>
-        <input type="text" v-model="newFruit">
+        <input type="text" v-model="newFruit" @keyup.enter="addFruit">
         <button @click="addFruit">Agregar</button>
 
         <ul>
             <li v-for="fruit in fruits2">
-                {{ fruit.quantity }} - {{ fruit.name }}
+                <input type="number" v-model.number="fruit.quantity">
+                {{ fruit.name }}
+                <button @click="fruit.quantity -= 1">-</button>
+                <button @click="fruit.quantity += 1">+</button>
                 <span v-if="fruit.quantity === 0"> - Sin Stock</span>
             </li>
         </ul>
+        <h4>TOTAL: {{ addUpFruits }}</h4>
 
     </div>
     <!-- development version, includes helpful console warnings -->
