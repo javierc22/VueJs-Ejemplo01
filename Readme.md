@@ -4,12 +4,12 @@
 
 
 ### Introducción
-- Presentación al curso Vue - Vuex - VueRouter - Firebase
+- **Presentación al curso Vue - Vuex - VueRouter - Firebase**
 –
 ### [VUE JS] Fundamentos
-- Instalar Vue js con CDN*
-- V-model*
-- Keyup, v-model y Computed*
+- **Instalar Vue js con CDN**
+- **V-model**
+- **Keyup, v-model y Computed**
 - Clases (v-bind:class)
 - Propiedades Computadas (computed)
 - Ciclo de vida de Vue (Lifecycle)
